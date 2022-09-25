@@ -17,7 +17,7 @@ inputPin = 24
 recordWaitTime = 10
 recordTime = 10
 lightDelayTime = 3
-shutoffPin = 29
+shutoffPin = 12
 
 #setup for all the pins
 GPIO.setup(ledPin, GPIO.OUT)

@@ -16,6 +16,7 @@ ledPin = 23
 outputPin = 24
 recordTime = 10
 lightDelayTime = 3
+shutoffPin = 12
 
 #setup for all the pins
 GPIO.setup(ledPin, GPIO.OUT)
@@ -52,3 +53,10 @@ GPIO.output(ledPin, GPIO.LOW)
 #extra sleep so one camera turns off before the other, this is optional
 sleep(3)
 GPIO.output(outputPin, GPIO.LOW)
+
+sleep(50)
+
+#OPTIONAL: you can connect the leader to the ti9mer module as well, and if the follower has not turned 
+#the system off for some reason after some time, the leader can then turn everything off
+GPIO.setup(shutoffPin, GPIO.OUT)
+GPIO.output(shutoffPin, GPIO.HIGH)
